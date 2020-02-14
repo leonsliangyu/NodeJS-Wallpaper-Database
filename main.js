@@ -73,7 +73,7 @@ function validURL(str) {
 
 
 app.get("/", function(req, res){
-	res.render("landing");
+	res.render("landing.ejs");
 });
 
 app.get("/walls", function(req, res){
