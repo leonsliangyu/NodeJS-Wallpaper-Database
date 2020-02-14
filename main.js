@@ -1,4 +1,8 @@
+
+
 var express = require('express'),
+	app = express(),
+	path = require('path');
 	request = require("request"),
 	ejs = require('ejs'),
 	bodyparser = require("body-parser"),
@@ -7,6 +11,8 @@ var express = require('express'),
 	passportLocalMongoose = require("passport-local-mongoose"),
 	User =require("./models/user.js"),
 	mongoose = require("mongoose");
+
+app.set('views', path.join(__dirname, 'views'));
 
 //user: liangyu
 //pass: 12345678
@@ -73,7 +79,7 @@ function validURL(str) {
 
 
 app.get("/", function(req, res){
-	res.render("landing.ejs");
+	res.render("landing");
 });
 
 app.get("/walls", function(req, res){
