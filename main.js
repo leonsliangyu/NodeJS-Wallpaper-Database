@@ -12,18 +12,15 @@ var express = require('express'),
 	User =require("./models/user.js"),
 	mongoose = require("mongoose");
 
-//user: liangyu
-//pass: 12345678
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname + '/views'))
+
 mongoose.connect("mongodb+srv://admin:9TW9THA7xq7BJS5m@liang-yu-mcstm.mongodb.net/walls", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true}  
 	);
 var app = express();
 app.use(bodyparser.urlencoded({extended : true}));
-
-app.set('views', './views');
-app.set('view engine', 'ejs');
-
 
 
 // SESSION CONFIGURATION
