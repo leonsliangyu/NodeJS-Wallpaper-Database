@@ -19,7 +19,7 @@ mongoose.connect("mongodb+srv://admin:9TW9THA7xq7BJS5m@liang-yu-mcstm.mongodb.ne
 	useNewUrlParser: true,
 	useUnifiedTopology: true}  
 	);
-var app = express();
+
 app.use(bodyparser.urlencoded({extended : true}));
 
 
