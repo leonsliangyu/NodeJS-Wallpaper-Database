@@ -22,7 +22,7 @@
   "license": "ISC",
     "engines": {
     "node": "12.14.0"
-  }
+  },
   "scripts": {
     "start": "node main.js"
   }
