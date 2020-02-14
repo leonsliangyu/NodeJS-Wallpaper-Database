@@ -12,8 +12,6 @@ var express = require('express'),
 	User =require("./models/user.js"),
 	mongoose = require("mongoose");
 
-app.set('views', path.join(__dirname, 'views'));
-
 //user: liangyu
 //pass: 12345678
 mongoose.connect("mongodb+srv://admin:9TW9THA7xq7BJS5m@liang-yu-mcstm.mongodb.net/walls", {
@@ -22,7 +20,11 @@ mongoose.connect("mongodb+srv://admin:9TW9THA7xq7BJS5m@liang-yu-mcstm.mongodb.ne
 	);
 var app = express();
 app.use(bodyparser.urlencoded({extended : true}));
+
+app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
+
+
 
 // SESSION CONFIGURATION
 app.use(require("express-session")({
