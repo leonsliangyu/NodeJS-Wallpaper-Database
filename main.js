@@ -152,6 +152,10 @@ function isLoggedIn(req, res, next){
 	res.redirect("/login");
 }
 
-var listener = app.listen(88, function(){
+let port = process.env.PORT;
+if (port==null || port == ""){
+	port = 88;
+}
+var listener = app.listen(port, function(){
     console.log('Wallpaper Server running on port ' + listener.address().port);
 });
