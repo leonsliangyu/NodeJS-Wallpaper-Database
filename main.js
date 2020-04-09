@@ -1,5 +1,4 @@
 
-
 var express = require('express'),
 	app = express(),
 	path = require('path');
@@ -14,13 +13,14 @@ var express = require('express'),
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname + '/views'))
+app.use(bodyparser.urlencoded({extended : true}));
+
 
 mongoose.connect("mongodb+srv://admin:9TW9THA7xq7BJS5m@liang-yu-mcstm.mongodb.net/walls", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true}  
 	);
 
-app.use(bodyparser.urlencoded({extended : true}));
 
 
 // SESSION CONFIGURATION
