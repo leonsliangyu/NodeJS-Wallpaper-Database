@@ -12,7 +12,7 @@ var express = require('express'),
 	mongoose = require("mongoose");
 
 app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname + '/views'))
+//app.set('views', path.join(__dirname + '/views'))
 app.use(bodyparser.urlencoded({extended : true}));
 
 
@@ -20,7 +20,6 @@ mongoose.connect("mongodb+srv://admin:9TW9THA7xq7BJS5m@liang-yu-mcstm.mongodb.ne
 	useNewUrlParser: true,
 	useUnifiedTopology: true}  
 	);
-
 
 
 // SESSION CONFIGURATION
