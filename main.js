@@ -12,7 +12,7 @@ var express = require('express'),
 	mongoose = require("mongoose");
 
 app.set('view engine', 'ejs')
-//app.set('views', path.join(__dirname + '/views'))
+app.set('views', path.join(__dirname + '/views'))
 app.use(bodyparser.urlencoded({extended : true}));
 
 
@@ -77,7 +77,7 @@ function validURL(str) {
 
 
 app.get("/", function(req, res){
-	res.render("landing");
+	res.render("landing.ejs");
 });
 
 app.get("/walls", function(req, res){
